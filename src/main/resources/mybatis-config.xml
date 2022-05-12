@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--配置数据源，交给Spring去做-->
+
+    <!--以包为单位，设置该包下所有的类型都拥有默认的别名，即类名且不区分大小写-->
+    <typeAliases>
+        <package name="pers.shui.ssm.pojo"/>
+    </typeAliases>
+
+    <mappers>
+        <!--
+        以包为单位，将包下所有的映射文件引入核心配置文件
+        注意：
+			1. 此方式必须保证mapper接口和mapper映射文件必须在相同的包下
+			2. mapper接口要和mapper映射文件的名字一致
+        -->
+        <package name="pers.shui.ssm.dao"/>
+    </mappers>
+</configuration>
